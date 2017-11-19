@@ -8,11 +8,13 @@ public class FamilyList {
     private String mDefaultName;
     private String mMiwokName;
     private int mImageId;
+    private int mFamilyAudio;
 
-    public FamilyList(int imageId,String defaultName, String miwokName) {
+    public FamilyList(int imageId,String defaultName, String miwokName,int familyAudio) {
         mImageId=imageId;
         mDefaultName = defaultName;
         mMiwokName = miwokName;
+        mFamilyAudio=familyAudio;
     }
 
     public String getmDefaultName() {
@@ -27,4 +29,5 @@ public class FamilyList {
         return mImageId;
     }
 
+    public int getmFamilyAudio() { return mFamilyAudio;}
 }

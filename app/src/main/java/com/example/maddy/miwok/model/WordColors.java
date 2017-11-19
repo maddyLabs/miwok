@@ -9,19 +9,22 @@ public class WordColors
     private String mMewokTranslation;
     private String mDefaultTranslation;
     private  int mColorImage;
+    private  int mColorAudio;
 
     public void setAssets(String mewokTranslation,String defaultTranslation,int colorImage)
     {
         mewokTranslation=mewokTranslation;
         mDefaultTranslation=defaultTranslation;
         mColorImage=colorImage;
+
     }
 
-     public WordColors(int colorImage,  String defaultTranslation,String mewokTranslation)
+     public WordColors(int colorImage,  String defaultTranslation,String mewokTranslation,int colorAudio)
     {
         this.mColorImage=colorImage;
         this.mDefaultTranslation=defaultTranslation;
         this.mMewokTranslation=mewokTranslation;
+        this.mColorAudio=colorAudio;;
     }
 
     public String getMewokTranslation() {
@@ -33,4 +36,6 @@ public class WordColors
     }
 
     public int getmColorImage() {return mColorImage;}
+
+    public int getmColorAudio(){ return  mColorAudio;}
 }

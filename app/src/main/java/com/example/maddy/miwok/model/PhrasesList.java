@@ -8,11 +8,13 @@ public class PhrasesList
 {
     private String mDefaultPhrase;
     private String mMiwokPhrase;
+    private  int mPhraseAudio;
 
-    public PhrasesList(String defaultPhrase,String miwokPhrase)
+    public PhrasesList(String defaultPhrase,String miwokPhrase,int phraseAudio)
     {
         mDefaultPhrase=defaultPhrase;
         mMiwokPhrase=miwokPhrase;
+        mPhraseAudio=phraseAudio;
     }
 
     public String getmDefaultPhrase()
@@ -24,4 +26,6 @@ public class PhrasesList
     {
         return mMiwokPhrase;
     }
+
+    public int getmPhraseAudio () { return mPhraseAudio;}
 }
