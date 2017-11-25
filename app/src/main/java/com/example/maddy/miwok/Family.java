@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.maddy.miwok.model.FamilyList;
 
@@ -55,6 +56,12 @@ public class Family extends AppCompatActivity {
                 FamilyList objFamilyList=familyList.get(position);
                 MediaPlayer objMediaPlayer=MediaPlayer.create(Family.this,objFamilyList.getmFamilyAudio());
                 objMediaPlayer.start();
+                objMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        Toast.makeText(Family.this, "Playing sound task is Completed", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }

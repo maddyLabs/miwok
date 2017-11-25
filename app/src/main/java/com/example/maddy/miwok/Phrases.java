@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.maddy.miwok.model.PhrasesList;
 
@@ -61,6 +62,12 @@ public class Phrases extends AppCompatActivity {
                 PhrasesList objPhraseList= myPhrases.get(position);
                 MediaPlayer objMediaPlayer= MediaPlayer.create(Phrases.this,objPhraseList.getmPhraseAudio());
                 objMediaPlayer.start();
+                objMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        Toast.makeText(Phrases.this, "Playing task is Completed", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }

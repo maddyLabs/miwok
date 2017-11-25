@@ -33,4 +33,14 @@ public class Word {
     public int getmNumberAudio() {
         return mNumberAudio;
     }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mMewokTranslation='" + mMewokTranslation + '\'' +
+                ", mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mNumberImage=" + mNumberImage +
+                ", mNumberAudio=" + mNumberAudio +
+                '}';
+    }
 }

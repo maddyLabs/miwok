@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.maddy.miwok.model.WordColors;
 
@@ -47,6 +48,12 @@ public class Colors extends AppCompatActivity {
                 WordColors objWordColors=myColors.get(position);
                 MediaPlayer mediaPlayer=MediaPlayer.create(Colors.this,objWordColors.getmColorAudio());
                 mediaPlayer.start();
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        Toast.makeText(Colors.this, "Task playing sound is Completed", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }
